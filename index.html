@@ -2,22 +2,21 @@
 
 <html lang="es">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inmobiliaria Zalamea</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+    font-family:'Poppins',sans-serif;
+    background:#f7f7f7;
     }
-    header {
-      background-color: red;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+   header{
+    background: linear-gradient(135deg,#8b0000,#c62828);
+    color:white;
+    padding:40px 20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
     header .header-content {
       display: flex;
       flex-wrap: wrap;
@@ -30,16 +29,26 @@
       max-width: 100%;
       height: auto;
     }
-    header h1 {
-      font-size: 36px;
-      margin: 0;
-    }
+   header h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+    opacity:.9;
+}
     nav {
       background-color: #222;
       color: white;
       text-align: center;
       padding: 15px 0;
       flex-wrap: wrap;
+       position:sticky;
+    top:0;
+    z-index:999;
+    background:#1f1f1f;
     }
     nav a {
       display: inline-block;
@@ -67,7 +76,7 @@
     }
     .instagram-button {
       display: inline-block;
-      background-color: red;
+      background-color: #8B0000;
       color: white;
       padding: 10px 15px;
       border-radius: 5px;
@@ -87,21 +96,30 @@
       max-width: 600px;
       margin: 20px auto;
       padding: 15px;
-      background-color: #fff;
+   background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    transition:.3s;
+    margin:40px auto;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       text-align: left;
     }
+    .property-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
     .carousel {
       position: relative;
       max-width: 100%;
       margin-bottom: 15px;
     }
-    .carousel-inner img {
-      width: 100%;
-      display: none;
-      border-radius: 10px;
-    }
+  .carousel-inner img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
     .carousel-inner img.active { display: block; }
     .prev, .next {
       position: absolute;
@@ -126,6 +144,21 @@
       border-radius: 5px;
       font-weight: bold;
     }
+.precio{
+    font-size:34px;
+    color:#c62828;
+    font-weight:700;
+    margin:20px 0;
+}
+    .contact-buttons a:hover{
+    transform:scale(1.05);
+}
+    .contact-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+    
     .contact-buttons a.call { background-color: #555; }
     .contact-buttons a.email { background-color: #0072c6; }
     .contact-buttons a.instagram { background-color: red; }
@@ -237,7 +270,7 @@ puedes <strong>solicitar una visita personalizada</strong>. ¡Estaremos encantad
   <li>🌾 <strong>Zona tranquila y con privacidad</strong> (Viñas Nuevas)</li>
 </ul>
 
-<p><strong>💰 Precio:</strong> 75.000 €</p>
+<p class="precio">75.000 €</p>
 
 <div class="contact-buttons">
   <a class="call" href="tel:+34636586791">Llamar</a>
