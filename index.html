@@ -116,30 +116,15 @@ header p{
     height:420px;
     object-fit:cover;
 }
-    .carousel-inner img.active { display: block; }
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-      border-radius: 50%;
-    }
-    .prev { left: 10px; }
-    .next { right: 10px; }
-    .contact-buttons a {
-      display: inline-block;
-      margin: 5px 5px 0 0;
-      padding: 10px 15px;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+ .carousel-inner img {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+.carousel-inner img.active {
+    display: block;
+}
 .precio{
     font-size:34px;
     color:#c62828;
